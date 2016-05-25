@@ -13,5 +13,8 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   --%>
-<%-- Default behavior is to simply show the site's home page --%>
-<jsp:forward page="home.jsp"/>
+<%-- General purpose JSP includes, useful on other pages.  This allows us to
+     consolidate these entries in one place instead of having to manually
+     repeat them on every page. --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
