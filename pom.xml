@@ -42,6 +42,7 @@
 					<!-- 注意此处的url -->
 					<url>http://localhost:8080/manager/text</url>
 					<server>tomcat7</server> <!-- 此处的名字必须和setting.xml中配置的ID一致 -->
+					<update>true</update>
 					<path>/first-maven</path> <!-- 此处的名字是项目发布的工程名 -->
 				</configuration>
 			</plugin>
