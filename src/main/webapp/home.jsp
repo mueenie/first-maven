@@ -81,8 +81,7 @@
     </ul>
 
 	<hr>
-	
-	<shiro:hasRole name="import-youzan"><a href="<c url value="/import/youzan"/>">Import data from Youzan</a></shiro:hasRole>
+	<shiro:hasRole name="import-youzan"><a href="<c:url value="/import/youzan"/>">Import data from Youzan</a></shiro:hasRole>
 	<shiro:lacksRole name="import-youzan">Import data from Youzan</shiro:lacksRole>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
