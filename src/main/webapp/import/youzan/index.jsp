@@ -8,7 +8,7 @@
 </head>
 <body>
 <h2>upload Youzan file</h2>
-<form method="POST" enctype="multipart/form-data" action="UploadFileServlet">
+<form method="POST" enctype="multipart/form-data" action="/UploadFileServlet">
   File to upload: <input type="file" name="upfile"><br/>
   Notes about the file: <input type="text" name="note"><br/>
   <br/>
