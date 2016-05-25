@@ -83,7 +83,7 @@
 	<hr>
 	
 	<shiro:hasRole name="import-youzan"><a href="/import/youzan/">Import data from Youzan</a></shiro:hasRole>
-	<shiro:hasRole name="import-youzan">Import data from Youzan</shiro:hasRole>
+	<shiro:lacksRole name="import-youzan">Import data from Youzan</shiro:lacksRole>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
