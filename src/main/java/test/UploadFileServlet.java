@@ -162,6 +162,7 @@ public class UploadFileServlet extends HttpServlet {
                 System.out.println(columns[4]);
                 System.out.println(columns[5]);
                 System.out.println(columns[6]);
+                //create table test(xh int,kaohao varchar(10),name varchar(10),sex varchar(2),sfz varchar(18),zy varchar(10),xf double);
                  PreparedStatement pstmt = conn.prepareStatement("insert into test(xh,kaohao,name,sex,sfz,zy,xf)values(?,?,?,?,?,?,?)");
                  pstmt.setString(1, columns[0]);
                  pstmt.setString(2, columns[1]);

@@ -45,7 +45,9 @@
         ( <shiro:user><a href="<c:url value="/logout"/>">Log out</a></shiro:user>
         <shiro:guest><a href="<c:url value="/login.jsp"/>">Log in</a></shiro:guest> )
     </p>
-
+    
+    <!-- 
+    
     <p>Welcome to the Apache Shiro Tutorial Webapp.  This page represents the home page of any web application.</p>
 
     <shiro:authenticated><p>Visit your <a href="<c:url value="/account"/>">account page</a>.</p></shiro:authenticated>
@@ -81,8 +83,19 @@
     </ul>
 
 	<hr>
+	-->
+	
+	<!-- import youzan -->
 	<shiro:hasRole name="import-youzan"><a href="<c:url value="/import/youzan"/>">Import data from Youzan</a></shiro:hasRole>
 	<shiro:lacksRole name="import-youzan">Import data from Youzan</shiro:lacksRole>
+	
+	<!-- import taobao -->
+	<shiro:hasRole name="import-taobao"><a href="<c:url value="/import/taobao"/>">Import data from Taobao</a></shiro:hasRole>
+	<shiro:lacksRole name="import-taobao">Import data from Taobao</shiro:lacksRole>
+	
+	<!-- show order stat -->
+	<shiro:hasRole name="show-order-stat"><a href="<c:url value="/show/order/stat"/>">Show order stat</a></shiro:hasRole>
+	<shiro:lacksRole name="show-order-stat">Show order stat</shiro:lacksRole>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
