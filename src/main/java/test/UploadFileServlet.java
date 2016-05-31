@@ -148,7 +148,7 @@ public class UploadFileServlet extends HttpServlet {
              conn =  DriverManager.getConnection(url, "root", "Rabbit02");
      
 //             bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(filePath)));
-             bufferedReader = new BufferedReader(new InputStreamReader(item.getInputStream()));
+             bufferedReader = new BufferedReader(new InputStreamReader(item.getInputStream(),"UTF-8"));
             String line = null;
             while ((line = bufferedReader.readLine()) != null) {
                 String[] columns = line.split(",");
