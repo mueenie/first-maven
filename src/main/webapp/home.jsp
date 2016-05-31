@@ -19,7 +19,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Apache Shiro Tutorial Webapp</title>
+    <title>BBJ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Add some nice styling and functionality.  We'll just use Twitter Bootstrap -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
@@ -30,18 +30,10 @@
 </head>
 <body>
 
-    <h1>Apache Shiro Tutorial Webapp</h1>
+    <h1>Running Cock</h1>
 
-    <p>Hi <shiro:guest>Guest</shiro:guest><shiro:user>
-        <%
-            //This should never be done in a normal page and should exist in a proper MVC controller of some sort, but for this
-            //tutorial, we'll just pull out Stormpath Account data from Shiro's PrincipalCollection to reference in the
-            //<c:out/> tag next:
-
-            request.setAttribute("account", org.apache.shiro.SecurityUtils.getSubject().getPrincipals().oneByType(java.util.Map.class));
-
-        %>
-        <c:out value="${account.givenName}"/></shiro:user>!
+    <p>Hi <shiro:guest>Guest</shiro:guest>
+    <shiro:user><shiro:principal property="firstName"/></shiro:user>!
         ( <shiro:user><a href="<c:url value="/logout"/>">Log out</a></shiro:user>
         <shiro:guest><a href="<c:url value="/login.jsp"/>">Log in</a></shiro:guest> )
     </p>
@@ -88,11 +80,11 @@
 	<!-- import youzan -->
 	<shiro:hasRole name="import-youzan"><a href="<c:url value="/import/youzan"/>">Import data from Youzan</a></shiro:hasRole>
 	<shiro:lacksRole name="import-youzan">Import data from Youzan</shiro:lacksRole>
-	
+	<br>
 	<!-- import taobao -->
 	<shiro:hasRole name="import-taobao"><a href="<c:url value="/import/taobao"/>">Import data from Taobao</a></shiro:hasRole>
 	<shiro:lacksRole name="import-taobao">Import data from Taobao</shiro:lacksRole>
-	
+	<br>
 	<!-- show order stat -->
 	<shiro:hasRole name="show-order-stat"><a href="<c:url value="/show/order/stat"/>">Show order stat</a></shiro:hasRole>
 	<shiro:lacksRole name="show-order-stat">Show order stat</shiro:lacksRole>
